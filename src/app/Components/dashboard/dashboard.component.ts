@@ -12,13 +12,23 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  sendToDataLayer() {
+  sendToDataLayerA() {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'button_click',
       category: 'Button',
       action: 'Click',
-      label: 'Click Me Button',
+      label: 'Click Me Button Home',
+    });
+  }
+
+  sendToDataLayerB() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'button_click',
+      category: 'Button',
+      action: 'Click',
+      label: 'Click Me Button About',
     });
   }
 }

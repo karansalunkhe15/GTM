@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+}
+
+/* styles.css or app.component.css */
+header {
+  background-color: #4caf50; /* Change the background color */
+  text-align: center; /* Center the text within the header */
+  padding: 10px 0; /* Add some padding */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: hidden; /* Clear floats */
+}
+
+nav ul li {
+  display: inline; /* Display list items inline */
+}
+
+nav ul li a {
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Font weight */
+}
+
+nav ul li a:hover {
+  background-color: #3e8e41; /* Background color on hover */
+}

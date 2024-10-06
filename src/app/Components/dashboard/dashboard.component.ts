@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare var gtag: Function;
+declare let window: any;
 
 @Component({
   selector: 'app-dashboard',
@@ -11,19 +12,13 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  trackButtonClickOne() {
-    gtag('event', 'click', {
-      event_category: 'Button',
-      event_label: 'Click Me Button home',
-      value: 1,
-    });
-  }
-
-  trackButtonClickTwo() {
-    gtag('event', 'click', {
-      event_category: 'Button',
-      event_label: 'Click Me Button about',
-      value: 1,
+  sendToDataLayer() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'button_click',
+      category: 'Button',
+      action: 'Click',
+      label: 'Click Me Button',
     });
   }
 }
